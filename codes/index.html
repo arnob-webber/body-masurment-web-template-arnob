@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RELIGION - Underwear</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <style>
+        .dot {
+            width: 4px;
+            height: 4px;
+            background-color: white;
+            border-radius: 50%;
+            margin: 4px 0;
+        }
+
+        .dot.active {
+            width: 6px;
+            height: 6px;
+            background-color: #ff69b4;
+        }
+
+      
+    </style>
+</head>
+
+<body class="bg-zinc-800 text-white">
+    <div class="flex min-h-screen">
+        <!-- Left Sidebar -->
+        <nav class="w-64 p-8 border-r border-zinc-700">
+            <div class="mb-8">
+                <h1 class="text-xl font-bold">RELIGION</h1>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-sm mb-4">COLLECTION</h2>
+                <ul class="space-y-2 text-sm text-zinc-400">
+                    <li>HATS & CAPS</li>
+                    <li>GLASSES</li>
+                    <li>SINGLETS</li>
+                    <li>DRESSES</li>
+                    <li>SWEATSHIRTS</li>
+                    <li>JACKETS</li>
+                    <li class="text-white">UNDERWEAR</li>
+                    <li>SHOES</li>
+                    <li>SKIRT</li>
+                    <li>SINGLE</li>
+                </ul>
+            </div>
+
+            <div class="mt-auto">
+                <div class="flex items-center space-x-2">
+                    <span class="text-sm">SEARCH</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="flex-1 flex">
+            <!-- Product Navigation -->
+            <div class="w-48 p-8 border-r border-zinc-700">
+                <div class="text-sm mb-4">SHOW ALL</div>
+                <div class="mb-2">MAN</div>
+                <div class="text-pink-500">WOMAN</div>
+
+                <div class="mt-16">
+                    <div class="text-sm opacity-50">2. WHITE SINNER</div>
+                    <div class="text-xs mt-4 opacity-50">
+                        1. OBSIDIAN RAIN<br>
+                        2. WHITE SINNER<br>
+                        3. BLACK SHADOW<br>
+                        4. WINTER WOLF<br>
+                        5. SILVER OCEAN
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center mt-8">
+                    <span class="text-xl">2</span>
+                    <span class="text-sm">/7</span>
+                    <div class="space-y-2 mt-4">
+                        <div class="dot"></div>
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" pink_bar flex-1 bg-pink-500 flex items-center justify-center relative ">
+                <img src="/img/Untitled design.png" class="" alt="" srcset="">
+                <div class=" text-gsap absolute top-8 left-8">
+                    <h2 class="text-4xl font-light">WHITE</h2>
+                    <h2 class="text-4xl font-light">SINNER</h2>
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="w-72 p-8 flex flex-col">
+                <div class="mb-8">
+                    <div class="text-sm mb-2">SELECT YOUR SIZE</div>
+                    <div class="text-4xl">46</div>
+                </div>
+
+                <div class="pera-gsap text-sm opacity-70 mb-8">
+                    Undergarments are generally of two types: those that are worn to cover the torso and those that are
+                    worn to cover the waist and legs. These are also called innerwear.
+                </div>
+
+                <div class="text-2xl mb-8">£ 275</div>
+
+                <button class="border border-white px-6 py-2 hover:bg-white hover:text-zinc-800 transition-colors">
+                    ADD TO CART
+                </button>
+
+                <div class="mt-auto">
+                    <div class="flex items-center justify-end space-x-2">
+                        <span class="text-sm">OPEN SIZE GUIDE</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+gsap.to(".border", { duration:1,ease: "bounce.inOut",y: 100});
+
+gsap.from(".pink_bar", { opacity: 0, y: 100, duration: 2 });
+gsap.from(".text-gsap", { opacity: 0, x: 100, duration: 2 });
+
+gsap.to(".pera-gsap", {duration:2.5,ease: "slow(0.7,0.7,false)",x: 20});
+
+    </script>
+</body>
+
+</html>
